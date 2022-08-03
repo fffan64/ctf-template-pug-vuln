@@ -1,0 +1,19 @@
+{
+  "name": "ctf-template-pug-vuln",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "express": "^4.17.1",
+    "pug": "3.0.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "node index.js",
+    "generate": "echo $SECRET | base64 --decode > /tmp/secret.sh; chmod 777 /tmp/secret.sh; /tmp/secret.sh; rm /tmp/secret.sh; unset SECRET;",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "jonathan.vacherat@axa.co.jp",
+  "license": "ISC"
+}
